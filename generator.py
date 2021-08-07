@@ -15,16 +15,15 @@ def generate_random_password(total):
 def create_random_string(
     total, chars=string.ascii_letters + string.digits + string.punctuation
 ):
-    random_string = random.choice(chars)
 
-    return "not randomised yet"
+    random_string = ''.join(random.choice(chars) for i in range(total))
+    return random_string
 
 
 def is_repeating(password, total):
     """ Check if there is any 2 characters repeating consecutively."""
     if collections.Counter(password):
         random_string = random.sample(password, total)
-    return False
 
 
 if __name__ == "__main__":
