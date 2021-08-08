@@ -22,7 +22,7 @@ def create_random_string(
 
 def is_repeating(password, total):
     """ Check if there is any 2 characters repeating consecutively."""
-    if collections.Counter(password):
+    for i in range(total):
         random_string = random.sample(password, total)
 
 
